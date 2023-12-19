@@ -1,0 +1,14 @@
+.card {
+  height: 300px;
+  border: 1px solid #fff;
+  background-color: #F44336;
+}
+
+.slide li {
+  height: 300px;
+}
+.slide li a {
+  display: block;
+  height: 100%;
+  color: #F44336;
+}/*# sourceMappingURL=comm.css.map */

@@ -1,0 +1,17 @@
+@import 'variables', 'mixins';
+
+.card {
+    @include card($primary, $white)
+}
+
+.slide {
+    li {
+        height: 300px;
+        a {
+            display: block;
+            height: 100%;
+            color: $primary;
+        }
+    }
+    
+}
