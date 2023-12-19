@@ -1,7 +1,11 @@
-@import 'variables', 'mixins';
+@import 'variables', 'mixins', 'fonts', 'reset';
 
 .card {
-    @include card($primary, $white)
+    position: relative;
+    @include card($white, $primary);
+    span {
+        @include posXY;
+    }
 }
 
 .slide {
@@ -15,3 +19,5 @@
     }
     
 }
+
+@import 'main', 'sub1';
