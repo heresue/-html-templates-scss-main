@@ -1,23 +1,83 @@
 @import 'variables', 'mixins', 'fonts', 'reset';
 
-.card {
-    position: relative;
-    @include card($white, $primary);
-    span {
-        @include posXY;
-    }
+// btn style (*mixin에서 해도 되고 comm에서 해도 됨)
+
+// card style
+
+// list style
+
+// layout
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#header {
+    height: $hdH;
 }
 
-.slide {
-    li {
-        height: 300px;
+#main {
+    // min-height: calc(100vh -$hdH -$ftH);
+    //  > hd, ft의 유무에 따라 다르게 계산해줘야 해서 불편할 수도 있음
+    //  >> .wrap(dsp(flex), flex-dir(column), min-height & .main(fg1)로 설정
+    //      페이지별로 따로 빼주지않아도 되니까 더욱 편리
+    flex-grow: 1;
+}
+
+#footer {
+    height: $ftH;
+    background-color: $gray-100;
+}
+
+// header
+#header {
+    .inner {
+        // @include flexSpaceBetween
+        @include flex($justify: space-between);
+        // : mixin flex를 가져오되, jstify만 space-between으로 하겠다
+        }
+    .col-right {
+        display: flex;
+        flex-direction: row-reverse;   
+    }
+    .util {
+        ul {
+            display: flex;
+        }
         a {
-            display: block;
-            height: 100%;
-            color: $primary;
+            display: flex;
+            align-items: center;
+            height: $hdH;
+        }
+        .link-g {
+            display: flex;
+            align-items: center;
+            height: $hdH;
+            &::before {
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+            }
+        }
+        .link-lang {
+            &::before {
+                content: '\f0ac';
+            }
+        }
+        .link-search {
+            &::before {
+                content: '\f002';
+            }
+        }
+        .link-my {
+            &::before {
+                content: '\f007';
+            }
         }
     }
-    
 }
 
+
+// footer
+
+// 우선순위 때문에 main, sub는 뒤로 빼줌
 @import 'main', 'sub1';
