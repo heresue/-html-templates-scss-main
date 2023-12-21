@@ -80,13 +80,14 @@
                 <!-- gnb -->
                 <div class="gnb-wrap">
                     <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
-                    <input type="checkbox" name="gnbNav" id="gnbNav" class="inp-burger">
+                    <input type="checkbox" checked id="gnbNav" class="inp-burger">
                     <!-- input&label > id, for값 동일해야함-->
-                    <label for="gnbNav"> = </label>
+                    <label for="gnbNav" class="label-burger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
                         <div class="blind">전체 메뉴 보기</div>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                    </label>
                     <nav id="gnb">전체메뉴</nav>
                 </div>
                 <!-- util -->
